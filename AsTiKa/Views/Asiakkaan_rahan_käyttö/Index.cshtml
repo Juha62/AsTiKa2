@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AsTiKa.Models.Asiakkaan_rahan_käyttö>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nostot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Päiväys)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Määrä)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Käyttötarkoitus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kuittaaja)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_nimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nostot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Päiväys)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Määrä)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Käyttötarkoitus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kuittaaja)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Saldo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Saldo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Saldo })
+        </td>
+    </tr>
+}
+
+</table>

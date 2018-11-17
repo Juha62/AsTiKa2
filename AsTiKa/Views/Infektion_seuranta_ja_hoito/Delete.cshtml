@@ -1,0 +1,64 @@
+﻿@model AsTiKa.Models.Infektion_seuranta_ja_hoito
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Infektion_seuranta_ja_hoito</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Milloin_infektio_todettu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Milloin_infektio_todettu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oireet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oireet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mahdolliset_kontrollit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mahdolliset_kontrollit)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AsTiKa.Models.Vointi_päiväkirja>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoidon_tarpeen_kirjaaminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoidon_tavoitteiden_kirjaaminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoidon_suunnittelun_kirjaaminen)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_nimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoidon_tarpeen_kirjaaminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoidon_tavoitteiden_kirjaaminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoidon_suunnittelun_kirjaaminen)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Hoidon_toteutuksen_kirjaaminen }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Hoidon_toteutuksen_kirjaaminen }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Hoidon_toteutuksen_kirjaaminen })
+        </td>
+    </tr>
+}
+
+</table>

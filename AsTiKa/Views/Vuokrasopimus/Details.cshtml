@@ -1,0 +1,42 @@
+﻿@model AsTiKa.Models.Vuokrasopimu
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vuokrasopimu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Huoneiston_numero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Huoneiston_numero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sopijapuolen_tiedot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sopijapuolen_tiedot)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Vuokramäärä }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

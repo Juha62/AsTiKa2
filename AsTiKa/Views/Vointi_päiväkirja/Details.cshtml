@@ -1,0 +1,50 @@
+﻿@model AsTiKa.Models.Vointi_päiväkirja
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vointi_päiväkirja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoidon_tarpeen_kirjaaminen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoidon_tarpeen_kirjaaminen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoidon_tavoitteiden_kirjaaminen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoidon_tavoitteiden_kirjaaminen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoidon_suunnittelun_kirjaaminen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoidon_suunnittelun_kirjaaminen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Hoidon_toteutuksen_kirjaaminen }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

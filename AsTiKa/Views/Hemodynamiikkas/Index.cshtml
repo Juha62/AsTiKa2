@@ -1,0 +1,69 @@
+﻿@model IEnumerable<AsTiKa.Models.Hemodynamiikka>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Paino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lämmön_seuranta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nestelista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vatsantoiminta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EKG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Verensokeri)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_nimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Paino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lämmön_seuranta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nestelista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vatsantoiminta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EKG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Verensokeri)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Verenpaine }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Verenpaine }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Verenpaine })
+        </td>
+    </tr>
+}
+
+</table>

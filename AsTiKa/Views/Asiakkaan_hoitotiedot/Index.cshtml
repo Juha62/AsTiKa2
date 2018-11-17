@@ -1,0 +1,123 @@
+﻿@model IEnumerable<AsTiKa.Models.Asiakkaan_hoitotiedot>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edunvalvojan_yhteystiedot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Omahoitajan_yhteystiedot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoitavan_lääkärin_yhteystiedot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Omaisten_yhteystiedot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diagnoosit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Allergiat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kontrolloitavat_laboratoriokokeet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sovitut_ja_suunnitellut_kontrollikäynnit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Syöminen_erityisruokavalio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Liikkuminen__hygienia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ihon_kunto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Erityishoidot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kommunikointi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Psyykkinen_vointi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hoitoon_hakeutumisen_syy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_nimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edunvalvojan_yhteystiedot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Omahoitajan_yhteystiedot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoitavan_lääkärin_yhteystiedot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Omaisten_yhteystiedot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diagnoosit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Allergiat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kontrolloitavat_laboratoriokokeet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sovitut_ja_suunnitellut_kontrollikäynnit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Syöminen_erityisruokavalio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Liikkuminen__hygienia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ihon_kunto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Erityishoidot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kommunikointi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Psyykkinen_vointi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hoitoon_hakeutumisen_syy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Asukkaan_perustiedot }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Asukkaan_perustiedot }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Asukkaan_perustiedot })
+        </td>
+    </tr>
+}
+
+</table>

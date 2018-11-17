@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AsTiKa.Models.Rokotuslista>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anto_päivämäärä)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tehosterokotuksen_antopäivä)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mahdolliset_sivuoireet_rokotuksista)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_nimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anto_päivämäärä)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tehosterokotuksen_antopäivä)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mahdolliset_sivuoireet_rokotuksista)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Rokotteen_nimi }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Rokotteen_nimi }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Rokotteen_nimi })
+        </td>
+    </tr>
+}
+
+</table>

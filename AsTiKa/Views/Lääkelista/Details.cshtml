@@ -1,0 +1,34 @@
+﻿@model AsTiKa.Models.Lääkelista
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lääkelista</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lääkitys_historia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lääkitys_historia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Nykyhetken_lääkitys }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

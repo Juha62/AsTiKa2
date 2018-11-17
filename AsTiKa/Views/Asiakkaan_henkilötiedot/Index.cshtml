@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AsTiKa.Models.Asiakkaan_henkilötiedot>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_lähiomaiset)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Laskutustiedot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yleinen_edunvalvoja)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Muuttotiedot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Muut_tiedot)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_nimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_lähiomaiset)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Laskutustiedot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yleinen_edunvalvoja)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Muuttotiedot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Muut_tiedot)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Perustiedot }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Perustiedot }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Perustiedot })
+        </td>
+    </tr>
+}
+
+</table>

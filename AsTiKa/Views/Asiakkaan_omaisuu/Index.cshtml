@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AsTiKa.Models.Asiakkaan_omaisuu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Henkilökohtaiset_tavarat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Huonekalut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tekstiilit)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_nimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Henkilökohtaiset_tavarat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Huonekalut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tekstiilit)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Vuode_ja_liinavaatteet }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Vuode_ja_liinavaatteet }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Vuode_ja_liinavaatteet })
+        </td>
+    </tr>
+}
+
+</table>

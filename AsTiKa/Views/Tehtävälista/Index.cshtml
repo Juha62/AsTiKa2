@@ -1,0 +1,123 @@
+﻿@model IEnumerable<AsTiKa.Models.Tehtävälista_asukkaan_saapuessa_palvelutaloon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Omahoitajan_nimeäminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asukasopas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rekisteriselosteesta_kertominen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakkaan_oikeuksien_ja_velvollisuuksien_läpi_käyminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vuokrasopimuksen_tekeminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asumistuen_hakeminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Eläkkeensaajan_hoitotuen_hakeminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Muuttoilmoitus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valtakirja_apteekkia_varten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_resepti_suostumus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asiakasmaksuista_tiedottaminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asukaskansion_laatiminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Henkilötietojen_kirjaaminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Raha_asioiden_hoito_ja_edunvalvojan_nimeäminen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Omaisuusluettelon_laatiminen)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_nimi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Omahoitajan_nimeäminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asukasopas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rekisteriselosteesta_kertominen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakkaan_oikeuksien_ja_velvollisuuksien_läpi_käyminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vuokrasopimuksen_tekeminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asumistuen_hakeminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Eläkkeensaajan_hoitotuen_hakeminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Muuttoilmoitus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valtakirja_apteekkia_varten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_resepti_suostumus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asiakasmaksuista_tiedottaminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asukaskansion_laatiminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Henkilötietojen_kirjaaminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Raha_asioiden_hoito_ja_edunvalvojan_nimeäminen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Omaisuusluettelon_laatiminen)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Tilojen_ja_päivärytminen_esittely }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Tilojen_ja_päivärytminen_esittely }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Tilojen_ja_päivärytminen_esittely })
+        </td>
+    </tr>
+}
+
+</table>

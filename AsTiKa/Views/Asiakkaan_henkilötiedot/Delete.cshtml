@@ -1,0 +1,72 @@
+﻿@model AsTiKa.Models.Asiakkaan_henkilötiedot
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Asiakkaan_henkilötiedot</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_lähiomaiset)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_lähiomaiset)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Laskutustiedot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Laskutustiedot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yleinen_edunvalvoja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yleinen_edunvalvoja)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Muuttotiedot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Muuttotiedot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Muut_tiedot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Muut_tiedot)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -195,14 +197,94 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Asiakkaan_henkilötiedotController.cs" />
+    <Compile Include="Controllers\Asiakkaan_hoitotiedotController.cs" />
+    <Compile Include="Controllers\Asiakkaan_omaisuuController.cs" />
+    <Compile Include="Controllers\Asiakkaan_rahan_käyttöController.cs" />
+    <Compile Include="Controllers\Fysioterapian_kirjauksetController.cs" />
+    <Compile Include="Controllers\HemodynamiikkasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Infektion_seuranta_ja_hoitoController.cs" />
+    <Compile Include="Controllers\LääkelistaController.cs" />
+    <Compile Include="Controllers\Lääkärin_lausunnot_ja_hoitosuunnitelmatController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Muistihoitajan_sivuController.cs" />
+    <Compile Include="Controllers\RokotuslistasController.cs" />
+    <Compile Include="Controllers\TehtävälistaController.cs" />
+    <Compile Include="Controllers\Vointi_päiväkirjaController.cs" />
+    <Compile Include="Controllers\VuokrasopimusController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Asiakkaan_henkilötiedot.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Asiakkaan_hoitotiedot.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Asiakkaan_omaisuu.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Asiakkaan_rahan_käyttö.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AsTiKaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsTiKaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AsTiKaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AsTiKaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsTiKaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Fysioterapian_kirjaukset.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hemodynamiikka.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Infektion_seuranta_ja_hoito.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Login.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginByUsernamePassword_Result.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lääkelista.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lääkärin_lausunnot_ja_hoitosuunnitelmat.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Muistihoitajan_sivu.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rokotuslista.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tehtävälista_asukkaan_saapuessa_palvelutaloon.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vointi_päiväkirja.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vuokrasopimu.cs">
+      <DependentUpon>AsTiKaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -215,10 +297,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\AsTiKaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AsTiKaModel.edmx</DependentUpon>
+      <LastGenOutput>AsTiKaModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\AsTiKaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AsTiKaModel.edmx</DependentUpon>
+      <LastGenOutput>AsTiKaModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\AsTiKaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AsTiKaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AsTiKaModel.edmx.diagram">
+      <DependentUpon>AsTiKaModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -265,6 +364,76 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Asiakkaan_henkilötiedot\Create.cshtml" />
+    <Content Include="Views\Asiakkaan_henkilötiedot\Delete.cshtml" />
+    <Content Include="Views\Asiakkaan_henkilötiedot\Details.cshtml" />
+    <Content Include="Views\Asiakkaan_henkilötiedot\Edit.cshtml" />
+    <Content Include="Views\Asiakkaan_henkilötiedot\Index.cshtml" />
+    <Content Include="Views\Asiakkaan_hoitotiedot\Create.cshtml" />
+    <Content Include="Views\Asiakkaan_hoitotiedot\Delete.cshtml" />
+    <Content Include="Views\Asiakkaan_hoitotiedot\Details.cshtml" />
+    <Content Include="Views\Asiakkaan_hoitotiedot\Edit.cshtml" />
+    <Content Include="Views\Asiakkaan_hoitotiedot\Index.cshtml" />
+    <Content Include="Views\Asiakkaan_omaisuu\Create.cshtml" />
+    <Content Include="Views\Asiakkaan_omaisuu\Delete.cshtml" />
+    <Content Include="Views\Asiakkaan_omaisuu\Details.cshtml" />
+    <Content Include="Views\Asiakkaan_omaisuu\Edit.cshtml" />
+    <Content Include="Views\Asiakkaan_omaisuu\Index.cshtml" />
+    <Content Include="Views\Hemodynamiikkas\Create.cshtml" />
+    <Content Include="Views\Hemodynamiikkas\Delete.cshtml" />
+    <Content Include="Views\Hemodynamiikkas\Details.cshtml" />
+    <Content Include="Views\Hemodynamiikkas\Edit.cshtml" />
+    <Content Include="Views\Hemodynamiikkas\Index.cshtml" />
+    <Content Include="Views\Rokotuslistas\Create.cshtml" />
+    <Content Include="Views\Rokotuslistas\Delete.cshtml" />
+    <Content Include="Views\Rokotuslistas\Details.cshtml" />
+    <Content Include="Views\Rokotuslistas\Edit.cshtml" />
+    <Content Include="Views\Rokotuslistas\Index.cshtml" />
+    <Content Include="Views\Vuokrasopimus\Create.cshtml" />
+    <Content Include="Views\Vuokrasopimus\Delete.cshtml" />
+    <Content Include="Views\Vuokrasopimus\Details.cshtml" />
+    <Content Include="Views\Vuokrasopimus\Edit.cshtml" />
+    <Content Include="Views\Vuokrasopimus\Index.cshtml" />
+    <Content Include="Views\Asiakkaan_rahan_käyttö\Create.cshtml" />
+    <Content Include="Views\Asiakkaan_rahan_käyttö\Delete.cshtml" />
+    <Content Include="Views\Asiakkaan_rahan_käyttö\Details.cshtml" />
+    <Content Include="Views\Asiakkaan_rahan_käyttö\Edit.cshtml" />
+    <Content Include="Views\Asiakkaan_rahan_käyttö\Index.cshtml" />
+    <Content Include="Views\Lääkelista\Create.cshtml" />
+    <Content Include="Views\Lääkelista\Delete.cshtml" />
+    <Content Include="Views\Lääkelista\Details.cshtml" />
+    <Content Include="Views\Lääkelista\Edit.cshtml" />
+    <Content Include="Views\Lääkelista\Index.cshtml" />
+    <Content Include="Views\Fysioterapian_kirjaukset\Create.cshtml" />
+    <Content Include="Views\Fysioterapian_kirjaukset\Delete.cshtml" />
+    <Content Include="Views\Fysioterapian_kirjaukset\Details.cshtml" />
+    <Content Include="Views\Fysioterapian_kirjaukset\Edit.cshtml" />
+    <Content Include="Views\Fysioterapian_kirjaukset\Index.cshtml" />
+    <Content Include="Views\Infektion_seuranta_ja_hoito\Create.cshtml" />
+    <Content Include="Views\Infektion_seuranta_ja_hoito\Delete.cshtml" />
+    <Content Include="Views\Infektion_seuranta_ja_hoito\Details.cshtml" />
+    <Content Include="Views\Infektion_seuranta_ja_hoito\Edit.cshtml" />
+    <Content Include="Views\Infektion_seuranta_ja_hoito\Index.cshtml" />
+    <Content Include="Views\Lääkärin_lausunnot_ja_hoitosuunnitelmat\Create.cshtml" />
+    <Content Include="Views\Lääkärin_lausunnot_ja_hoitosuunnitelmat\Delete.cshtml" />
+    <Content Include="Views\Lääkärin_lausunnot_ja_hoitosuunnitelmat\Details.cshtml" />
+    <Content Include="Views\Lääkärin_lausunnot_ja_hoitosuunnitelmat\Edit.cshtml" />
+    <Content Include="Views\Lääkärin_lausunnot_ja_hoitosuunnitelmat\Index.cshtml" />
+    <Content Include="Views\Muistihoitajan_sivu\Create.cshtml" />
+    <Content Include="Views\Muistihoitajan_sivu\Delete.cshtml" />
+    <Content Include="Views\Muistihoitajan_sivu\Details.cshtml" />
+    <Content Include="Views\Muistihoitajan_sivu\Edit.cshtml" />
+    <Content Include="Views\Muistihoitajan_sivu\Index.cshtml" />
+    <Content Include="Views\Vointi_päiväkirja\Create.cshtml" />
+    <Content Include="Views\Vointi_päiväkirja\Delete.cshtml" />
+    <Content Include="Views\Vointi_päiväkirja\Details.cshtml" />
+    <Content Include="Views\Vointi_päiväkirja\Edit.cshtml" />
+    <Content Include="Views\Vointi_päiväkirja\Index.cshtml" />
+    <Content Include="Views\Tehtävälista\Create.cshtml" />
+    <Content Include="Views\Tehtävälista\Delete.cshtml" />
+    <Content Include="Views\Tehtävälista\Details.cshtml" />
+    <Content Include="Views\Tehtävälista\Edit.cshtml" />
+    <Content Include="Views\Tehtävälista\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -281,6 +450,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

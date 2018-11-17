@@ -1,0 +1,58 @@
+﻿@model AsTiKa.Models.Infektion_seuranta_ja_hoito
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Infektion_seuranta_ja_hoito</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Milloin_infektio_todettu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Milloin_infektio_todettu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Oireet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Oireet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mahdolliset_kontrollit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mahdolliset_kontrollit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Infektion_tyyppi }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

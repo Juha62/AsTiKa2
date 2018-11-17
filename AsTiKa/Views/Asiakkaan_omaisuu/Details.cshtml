@@ -1,0 +1,50 @@
+﻿@model AsTiKa.Models.Asiakkaan_omaisuu
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Asiakkaan_omaisuu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Henkilökohtaiset_tavarat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Henkilökohtaiset_tavarat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Huonekalut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Huonekalut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tekstiilit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tekstiilit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Vuode_ja_liinavaatteet }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

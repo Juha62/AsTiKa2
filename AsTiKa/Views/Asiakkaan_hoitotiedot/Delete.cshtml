@@ -1,0 +1,152 @@
+﻿@model AsTiKa.Models.Asiakkaan_hoitotiedot
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Asiakkaan_hoitotiedot</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edunvalvojan_yhteystiedot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edunvalvojan_yhteystiedot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Omahoitajan_yhteystiedot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Omahoitajan_yhteystiedot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoitavan_lääkärin_yhteystiedot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoitavan_lääkärin_yhteystiedot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Omaisten_yhteystiedot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Omaisten_yhteystiedot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Diagnoosit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Diagnoosit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Allergiat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Allergiat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kontrolloitavat_laboratoriokokeet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kontrolloitavat_laboratoriokokeet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sovitut_ja_suunnitellut_kontrollikäynnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sovitut_ja_suunnitellut_kontrollikäynnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Syöminen_erityisruokavalio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Syöminen_erityisruokavalio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Liikkuminen__hygienia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Liikkuminen__hygienia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ihon_kunto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ihon_kunto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Erityishoidot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Erityishoidot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kommunikointi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kommunikointi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Psyykkinen_vointi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Psyykkinen_vointi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hoitoon_hakeutumisen_syy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hoitoon_hakeutumisen_syy)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

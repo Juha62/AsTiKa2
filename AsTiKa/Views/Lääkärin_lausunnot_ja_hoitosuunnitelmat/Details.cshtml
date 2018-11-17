@@ -1,0 +1,42 @@
+﻿@model AsTiKa.Models.Lääkärin_lausunnot_ja_hoitosuunnitelmat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Lääkärin_lausunnot_ja_hoitosuunnitelmat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Neurologian_lausunnot_ja_hoitosuunnitelmat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Neurologian_lausunnot_ja_hoitosuunnitelmat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yleislääketied_lausunnot_ja_hoitosuunnitelmat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yleislääketied_lausunnot_ja_hoitosuunnitelmat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Psykiatrian_lausunnot_ja_hoitosuunnitelmat }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

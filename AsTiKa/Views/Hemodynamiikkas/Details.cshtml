@@ -1,0 +1,74 @@
+﻿@model AsTiKa.Models.Hemodynamiikka
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hemodynamiikka</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Paino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lämmön_seuranta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lämmön_seuranta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nestelista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nestelista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vatsantoiminta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vatsantoiminta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EKG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EKG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Verensokeri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Verensokeri)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Verenpaine }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,66 @@
+﻿@model AsTiKa.Models.Asiakkaan_rahan_käyttö
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Asiakkaan_rahan_käyttö</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Asiakkaan_nimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asiakkaan_nimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nostot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nostot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Päiväys)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Päiväys)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Määrä)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Määrä)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Käyttötarkoitus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Käyttötarkoitus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kuittaaja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kuittaaja)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Saldo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Globalization;
 using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -12,7 +10,7 @@ using AsTiKa.Models;
 
 namespace AsTiKa.Controllers
 {
-    [Authorize]
+
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -57,8 +55,22 @@ namespace AsTiKa.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
-            ViewBag.ReturnUrl = returnUrl;
-            return View();
+            try
+            {
+                // Verification.    
+                if (this.Request.IsAuthenticated)
+                {
+                    // Info.    
+                    return this.RedirectToLocal(returnUrl);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Info    
+                Console.Write(ex);
+            }
+            // Info.    
+            return this.View();
         }
 
         //
