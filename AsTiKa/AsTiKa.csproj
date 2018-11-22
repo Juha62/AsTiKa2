@@ -210,7 +210,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\Muistihoitajan_sivuController.cs" />
     <Compile Include="Controllers\RokotuslistasController.cs" />
-    <Compile Include="Controllers\TehtävälistaController.cs" />
+    <Compile Include="Controllers\Tehtävälista_asukkaan_saapuessa_palvelutaloonController.cs" />
     <Compile Include="Controllers\Vointi_päiväkirjaController.cs" />
     <Compile Include="Controllers\VuokrasopimusController.cs" />
     <Compile Include="Global.asax.cs">
@@ -429,11 +429,11 @@
     <Content Include="Views\Vointi_päiväkirja\Details.cshtml" />
     <Content Include="Views\Vointi_päiväkirja\Edit.cshtml" />
     <Content Include="Views\Vointi_päiväkirja\Index.cshtml" />
-    <Content Include="Views\Tehtävälista\Create.cshtml" />
-    <Content Include="Views\Tehtävälista\Delete.cshtml" />
-    <Content Include="Views\Tehtävälista\Details.cshtml" />
-    <Content Include="Views\Tehtävälista\Edit.cshtml" />
-    <Content Include="Views\Tehtävälista\Index.cshtml" />
+    <Content Include="Views\Tehtävälista_asukkaan_saapuessa_palvelutaloon\Create.cshtml" />
+    <Content Include="Views\Tehtävälista_asukkaan_saapuessa_palvelutaloon\Delete.cshtml" />
+    <Content Include="Views\Tehtävälista_asukkaan_saapuessa_palvelutaloon\Details.cshtml" />
+    <Content Include="Views\Tehtävälista_asukkaan_saapuessa_palvelutaloon\Edit.cshtml" />
+    <Content Include="Views\Tehtävälista_asukkaan_saapuessa_palvelutaloon\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

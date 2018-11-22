@@ -55,10 +55,10 @@ namespace AsTiKa.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Salasana")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Muista minut?")]
         public bool RememberMe { get; set; }
     }
 

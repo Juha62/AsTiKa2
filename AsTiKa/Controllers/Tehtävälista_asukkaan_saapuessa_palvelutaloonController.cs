@@ -10,17 +10,17 @@ using AsTiKa.Models;
 
 namespace AsTiKa.Controllers
 {
-    public class TehtävälistaController : Controller
+    public class Tehtävälista_asukkaan_saapuessa_palvelutaloonController : Controller
     {
         private AsTiKaEntities db = new AsTiKaEntities();
 
-        // GET: Tehtävälista
+        // GET: Tehtävälista_asukkaan_saapuessa_palvelutaloon
         public ActionResult Index()
         {
             return View(db.Tehtävälista_asukkaan_saapuessa_palvelutaloon.ToList());
         }
 
-        // GET: Tehtävälista/Details/5
+        // GET: Tehtävälista_asukkaan_saapuessa_palvelutaloon/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace AsTiKa.Controllers
             return View(tehtävälista_asukkaan_saapuessa_palvelutaloon);
         }
 
-        // GET: Tehtävälista/Create
+        // GET: Tehtävälista_asukkaan_saapuessa_palvelutaloon/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Tehtävälista/Create
+        // POST: Tehtävälista_asukkaan_saapuessa_palvelutaloon/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace AsTiKa.Controllers
             return View(tehtävälista_asukkaan_saapuessa_palvelutaloon);
         }
 
-        // GET: Tehtävälista/Edit/5
+        // GET: Tehtävälista_asukkaan_saapuessa_palvelutaloon/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace AsTiKa.Controllers
             return View(tehtävälista_asukkaan_saapuessa_palvelutaloon);
         }
 
-        // POST: Tehtävälista/Edit/5
+        // POST: Tehtävälista_asukkaan_saapuessa_palvelutaloon/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace AsTiKa.Controllers
             return View(tehtävälista_asukkaan_saapuessa_palvelutaloon);
         }
 
-        // GET: Tehtävälista/Delete/5
+        // GET: Tehtävälista_asukkaan_saapuessa_palvelutaloon/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace AsTiKa.Controllers
             return View(tehtävälista_asukkaan_saapuessa_palvelutaloon);
         }
 
-        // POST: Tehtävälista/Delete/5
+        // POST: Tehtävälista_asukkaan_saapuessa_palvelutaloon/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
