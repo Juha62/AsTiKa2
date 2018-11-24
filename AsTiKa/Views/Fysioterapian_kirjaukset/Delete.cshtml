@@ -1,12 +1,12 @@
 ﻿@model AsTiKa.Models.Fysioterapian_kirjaukset
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Poista";
 }
 
-<h2>Delete</h2>
+<h2>Poista</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Haluatko varmasti poistaa tämän?</h3>
 <div>
     <h4>Fysioterapian_kirjaukset</h4>
     <hr />
@@ -33,8 +33,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Poista" class="btn btn-default" /> |
+            @Html.ActionLink("Takaisin listaan", "Index")
         </div>
     }
 </div>

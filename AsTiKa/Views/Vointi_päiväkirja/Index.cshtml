@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Luo uusi", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Hoidon_suunnittelun_kirjaaminen)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Hoidon_toteutuksen_kirjaaminen }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Hoidon_toteutuksen_kirjaaminen }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Hoidon_toteutuksen_kirjaaminen })
+            @Html.ActionLink("Muokkaa", "Edit", new { id=item.Hoidon_toteutuksen_kirjaaminen }) |
+            @Html.ActionLink("Kaikki tiedot", "Details", new { id=item.Hoidon_toteutuksen_kirjaaminen }) |
+            @Html.ActionLink("Poista", "Delete", new { id=item.Hoidon_toteutuksen_kirjaaminen })
         </td>
     </tr>
 }

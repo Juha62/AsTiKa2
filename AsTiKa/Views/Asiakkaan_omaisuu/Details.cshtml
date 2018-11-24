@@ -1,13 +1,13 @@
 ﻿@model AsTiKa.Models.Asiakkaan_omaisuu
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Kaikki tiedot";
 }
 
-<h2>Details</h2>
+<h2>Tiedot</h2>
 
 <div>
-    <h4>Asiakkaan_omaisuu</h4>
+    <h4>Asiakkaan_omaisuus</h4>
     <hr />
     <dl class="form-group-lg">
         <dt>
@@ -45,6 +45,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Vuode_ja_liinavaatteet }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Muokkaa", "Edit", new { id = Model.Vuode_ja_liinavaatteet }) |
+    @Html.ActionLink("Takaisin listaan", "Index")
 </p>

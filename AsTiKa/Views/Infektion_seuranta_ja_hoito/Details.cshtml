@@ -1,10 +1,10 @@
 ﻿@model AsTiKa.Models.Infektion_seuranta_ja_hoito
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Kaikki tiedot";
 }
 
-<h2>Details</h2>
+<h2>Tiedot</h2>
 
 <div>
     <h4>Infektion_seuranta_ja_hoito</h4>
@@ -53,6 +53,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Infektion_tyyppi }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Muokkaa", "Edit", new { id = Model.Infektion_tyyppi }) |
+    @Html.ActionLink("Takaisin listaan", "Index")
 </p>

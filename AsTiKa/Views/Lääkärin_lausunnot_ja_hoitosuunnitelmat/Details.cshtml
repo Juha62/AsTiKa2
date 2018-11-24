@@ -1,10 +1,10 @@
 ﻿@model AsTiKa.Models.Lääkärin_lausunnot_ja_hoitosuunnitelmat
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Kaikki tiedot";
 }
 
-<h2>Details</h2>
+<h2>Tiedot</h2>
 
 <div>
     <h4>Lääkärin_lausunnot_ja_hoitosuunnitelmat</h4>
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Psykiatrian_lausunnot_ja_hoitosuunnitelmat }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Muokkaa", "Edit", new { id = Model.Psykiatrian_lausunnot_ja_hoitosuunnitelmat }) |
+    @Html.ActionLink("Takaisin listaan", "Index")
 </p>

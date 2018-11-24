@@ -1,10 +1,10 @@
 ﻿@model AsTiKa.Models.Lääkärin_lausunnot_ja_hoitosuunnitelmat
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Muokkaa";
 }
 
-<h2>Edit</h2>
+<h2>Muokkaa</h2>
 
 
 @using (Html.BeginForm())
@@ -43,14 +43,14 @@
 
         <div class="form-group">
             <div class="col-lg-offset-4 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Tallenna" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Takaisin listaan", "Index")
 </div>
 
 @section Scripts {

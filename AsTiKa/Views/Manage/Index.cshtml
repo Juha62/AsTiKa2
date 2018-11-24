@@ -1,32 +1,33 @@
 ﻿@model AsTiKa.Models.IndexViewModel
 @{
-    ViewBag.Title = "Manage";
+    ViewBag.Title = "Muuta";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 
 <p class="text-success">@ViewBag.StatusMessage</p>
 <div>
-    <h4>Change your account settings</h4>
+    <h4>Vaihda tilisi asetuksia</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>Password:</dt>
+        <dt>Salasana:</dt>
         <dd>
             [
             @if (Model.HasPassword)
             {
-                @Html.ActionLink("Change your password", "ChangePassword")
+                @Html.ActionLink("Vaihda salasanasi", "ChangePassword")
             }
             else
             {
-                @Html.ActionLink("Create", "SetPassword")
+                @Html.ActionLink("Luo", "SetPassword")
             }
             ]
         </dd>
+        <!-- Jos jossain vaiheessa tulee ulkoisia kirjautumis vaihtoehtoja, niin ne ovat tässä valmiina
         <dt>External Logins:</dt>
         <dd>
             @Model.Logins.Count [
-            @Html.ActionLink("Manage", "ManageLogins") ]
+            @Html.ActionLink("Muuta", "ManageLogins") ]
         </dd>
         @*
             Phone Numbers can used as a second factor of verification in a two-factor authentication system.
@@ -82,6 +83,6 @@
                         </text>
                     }
                 }*@
-        </dd>
+        </dd> -->
     </dl>
 </div>
